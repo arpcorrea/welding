@@ -5,7 +5,7 @@ Geometry:
     Length X: 0.2
     Length Y1: 0.001
     Length Y2: 0.002
-    HE: 0.00002
+    HE: 0.0002
     
 Processing Parameters:
     Temperature: 648
