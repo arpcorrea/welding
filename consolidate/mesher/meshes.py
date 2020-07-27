@@ -126,7 +126,7 @@ class MeshTwoPlates():
         self.distThickness=np.zeros((self.ny))
         self.distThickness[0:self.ny1+1]=self.ElementsThickness[0:self.ny1+1]*self.dy1
         self.distThickness[self.ny1+1]=self.distThickness[self.ny1]+self.dhe
-        self.distThickness[self.ny1+2:self.ny]=self.distThickness[self.ny1+1]+self.ElementsThickness[1:self.ny2-]*self.dy2
+        self.distThickness[self.ny1+2:self.ny]=self.distThickness[self.ny1+1]+self.ElementsThickness[1:self.ny2]*self.dy2
         # DistY[self.ny1, 1:-1]=self.dhe
       
        
