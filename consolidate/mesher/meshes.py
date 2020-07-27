@@ -33,12 +33,11 @@ class MeshTwoPlates():
         self.dhe=self.geometry.Lhe
         
         
-        X, Y = np.meshgrid(np.arange(0, self.ny+1), np.arange(0, self.nx))
-        X=X[1,:].copy()
-        Y=Y[:,1].copy()
-        self.X = X
-        self.Y = Y
-
+        X,Y = np.meshgrid(np.arange(0, self.ny), np.arange(0, self.nx))
+        ElementsThickness=X[1,:].copy()
+        ElementsWidth=Y[:,1].copy()
+        self.ElementsThickness = ElementsThickness.copy()
+        self.ElementsWidth = ElementsWidth.copy()
     
         
         
@@ -124,11 +123,11 @@ class MeshTwoPlates():
 
     def dist(self):
         
-        distY=np.zeros((self.ny+1))
-        distY[0:self.ny1+1]=self.X[0:self.ny1+1]*self.dy1
-        distY[self.ny1+1]=distY[self.ny1]+self.dhe
-        distY[self.ny1+2:self.ny+1]=distY[self.ny1+1]+self.X[1:self.ny2+1]*self.dy2
+        self.distThickness=np.zeros((self.ny))
+        self.distThickness[0:self.ny1+1]=self.ElementsThickness[0:self.ny1+1]*self.dy1
+        self.distThickness[self.ny1+1]=self.distThickness[self.ny1]+self.dhe
+        self.distThickness[self.ny1+2:self.ny]=self.distThickness[self.ny1+1]+self.ElementsThickness[1:self.ny2-]*self.dy2
         # DistY[self.ny1, 1:-1]=self.dhe
       
-        self.distY=distY.copy()
+       
         
