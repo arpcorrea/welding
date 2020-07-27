@@ -5,7 +5,7 @@ Geometry:
     Length X: 0.2
     Length Y1: 0.001
     Length Y2: 0.002
-    HE: 0.00005
+    HE: 0.00002
     
 Processing Parameters:
     Temperature: 648
@@ -31,7 +31,7 @@ Simulation:
   Number Time Steps: 10001
   Number of Elements X: 200
   Number of Elements Y1: 50
-  Number of Elements Y2: 100
+  Number of Elements Y2: 50
 
 Plot:
   Temp Output Folder: "./output/Temperature/"
